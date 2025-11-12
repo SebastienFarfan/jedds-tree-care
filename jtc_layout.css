@@ -1,19 +1,19 @@
 @charset "utf-8";
 /*
-   New Perspectives on HTML5 and CSS3, 7th Edition
-   Tutorial 1
-   Case Problem 1
-   Filename: jtc_layout.css
+   New Perspectives on HTML5 and CSS3, 7th Edition
+   Tutorial 1
+   Case Problem 1
+   Filename: jtc_layout.css
 
-   This file contains the layout styles used in the JTC website
+   This file contains the layout styles used in the JTC website
 
 */
 
 /* =============================================
 	Base layout styles used by mobile devices
-	up to 480px and cascaded to larger devices 
+	up to 480px and cascaded to larger devices 
 	unless superceded by other styles.
-   =============================================
+   =============================================
 */
 
 
@@ -78,7 +78,7 @@ article header img {
 }
 
 article p {
-    margin-left: 20px;
+    margin-left: 20px;
 	margin-right: 20px;
 	font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "DejaVu Sans", Verdana, sans-serif;
 	font-size: 0.9em;
@@ -130,9 +130,9 @@ footer {
 
 /* =============================================
 	Tablet layout styles used by devices
-	601px to 768px and cascaded to larger 
+	601px to 768px and cascaded to larger 
 	devices.
-   =============================================
+   =============================================
 */
 
 
@@ -142,11 +142,14 @@ body {
 	min-height: 100%;
 }
 
+/* FIX: REMOVED absolute positioning on nav ul so the navigation bar stays in its place above the content */
+/* The previous code was:
 body > header nav ul {
 	position:absolute;
 	top: 0;
 	right: 0;
 }
+*/
 
 article {
 	margin-left: 250px;
@@ -169,7 +172,7 @@ aside {
 	float: left;
 	width: 250px;
 	background-color: #a29d96;
-	margin-top: -30px;
+	margin-top: 0; /* FIX: Changed from -30px to 0 to align the aside with the article content */
 }
 
 aside blockquote {
@@ -212,9 +215,9 @@ footer {
 }
 
 /* =============================================
-	Desktop layout styles used by  devices
+	Desktop layout styles used by  devices
 	769px and larger.
-   =============================================
+   =============================================
 */
 
 @media only screen and (min-width: 769px) {
@@ -226,9 +229,9 @@ html {
 body {
 	width: 90%;
 	max-width: 1020px;
-	-moz-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
-	-webkit-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
-	box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
+	-moz-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
+	-webkit-box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
+	box-shadow: rgba(31, 61, 31, 0.9) 20px 0px 25px,  rgba(31, 61, 31, 0.9) -20px 0px 25px;
 }
 
 }
